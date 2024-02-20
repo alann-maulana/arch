@@ -24,7 +24,6 @@ jobs:
           base_image: ${{ matrix.base_image }}
           commands: |
             test `uname -m` = ${{ matrix.arch }}
-            grep Model /proc/cpuinfo
             sudo apt update
             sudo apt install snapd
             sudo snap install flutter --classic
