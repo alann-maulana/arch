@@ -25,8 +25,8 @@ jobs:
           commands: |
             test `uname -m` = ${{ matrix.arch }}
             sudo apt update -y
-            sudo apt autoremove --purge snapd
             sudo apt install -y snapd
+            sudo systemctl enable snapd
             sudo snap install flutter --classic
             sudo apt update -y
             sudo apt install -y ninja-build libgtk-3-dev
